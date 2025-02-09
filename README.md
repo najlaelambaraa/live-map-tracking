@@ -61,8 +61,3 @@ pm2 start server.js --name suivi-app
 ### **3.2 Interactions avec l’interface**
 - **Carte** : L’utilisateur voit les autres utilisateurs en temps réel.
 - **Bouton "Démarrer l’appel"** : Permet d’initier un appel vidéo.
-
-## 4. Limites et pistes d’amélioration
-- **Compatibilité navigateur** : WebRTC fonctionner sur les  navigateurs.
-- **Optimisation des performances** : En cas de nombreux utilisateurs, la gestion WebSocket doit être optimisée.
-- **Ajout d'un serveur TURN** : Pour garantir les connexions WebRTC derrière des pare-feu stricts.
