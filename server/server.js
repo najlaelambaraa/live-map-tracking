@@ -104,6 +104,10 @@ wss.on('connection', (ws) => {
     });
 });
 
+/**
+ * Diffuse les positions de tous les clients connectés à tous les autres clients.
+ * Seuls les clients ayant une position définie sont inclus dans la diffusion.
+ */
 function broadcastPositions() {
     const positions = Array.from(clients.entries()).map(([clientId, client]) => ({
         userId: clientId,
@@ -119,6 +123,12 @@ function broadcastPositions() {
     });
 }
 
+/**
+ * Informe tous les clients connectés de la déconnexion d'un utilisateur
+ * en leur envoyant un message pour supprimer son marqueur sur la carte.
+ *
+ * @param {string} userId - Identifiant de l'utilisateur qui s'est déconnecté.
+ */
 function broadcastDisconnection(userId) {
     wss.clients.forEach(client => {
         if (client.readyState === WebSocket.OPEN) {
