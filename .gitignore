@@ -1,0 +1,39 @@
+# 🔒 Fichiers sensibles
+.env
+.env.local
+.env.*.local
+
+# 📦 Dépendances Node.js
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ⚙️ Cache et fichiers temporaires
+.DS_Store
+*.log
+logs/
+*.pid
+*.seed
+*.tgz
+*.swp
+
+# 📦 Dossier `dist` pour les builds (si applicable)
+dist/
+build/
+
+# 💾 Base de données locale (si tu utilises SQLite ou autres)
+*.sqlite
+*.sqlite3
+*.db
+
+# 🚀 Fichiers spécifiques à certains éditeurs de code
+.vscode/
+.idea/
+*.iml
+
+# 🐳 Fichiers Docker (si applicable)
+docker-compose.override.yml
+
+# 🔧 Ignorer tout fichier de configuration personnalisé
+config/*.local.json
